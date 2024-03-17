@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin view page</title>
+</head>
+<body>
+    <h1>User details</h1>
+        
+        <ol>
+            {% for u in sqldata %}
+            <li>
+                <ul>
+                    <li>User_key_Id : {{u[0]}}</li>
+                    <li>User Name : {{u[1]}}</li>
+                    <li>User Email : {{u[2]}}</li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ol>
+        
+</body>
+</html>

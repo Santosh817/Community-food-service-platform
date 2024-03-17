@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Welcome page </title>
+</head>
+<body>
+  <!-- <header class="navbar fixed-top">
+    <p></p>
+    <br>
+    <h1>Community Food Sharing Platform</h1>
+  </header> -->
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body fixed-top">
+        
+        <div class="container-fluid">
+          <button
+            data-mdb-collapse-init
+            class="navbar-toggler"
+            type="button"
+            data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+  
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li><h1>Community Food Sharing Platform</h1></li>
+              <li class="nav-item active mr-auto">
+                <a class="nav-link" aria-current="page" href="/addfood">Add Food</a>
+              </li>
+              <li class="nav-item mr-auto">
+                <a class="nav-link" href="/deletefood">Delete Food</a>
+              </li>
+              <li class="nav-item mr-auto">
+                <a class="nav-link" href="/">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar -->
+    
+      <!-- Jumbotron -->
+      <div class="p-5 bg-body-tertiary" style="margin-top: 58px;">
+        <h3>Welcome {{user}}</h3>
+        <ul>
+          {% for u in sqldata %}
+          <li>
+            <ol>
+              <li>
+                  Food name : {{u[0]}}
+              </li>
+              <li>
+                  Food type : {{u[1]}}
+              </li>
+              <li>
+                  Quantity : {{u[2]}}
+              </li>
+            </ol>
+            <br>
+          {% endfor %}
+      </ul>
+      </div>
+      <!-- Jumbotron -->
+    </header>
+</body>
+</html>
